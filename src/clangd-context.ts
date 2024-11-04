@@ -171,7 +171,7 @@ export class ClangdContext implements vscode.Disposable {
       },
     };
 
-    this.client = new ClangdLanguageClient('Clang Language Server',
+    this.client = new ClangdLanguageClient('clangd', 'Clang Language Server',
                                            serverOptions, clientOptions);
     this.client.clientOptions.errorHandler =
         this.client.createDefaultErrorHandler(

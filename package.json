@@ -108,9 +108,16 @@
                     },
                     "description": "Arguments for clangd server."
                 },
-                "clangd.trace": {
-                    "type": "string",
-                    "description": "Names a file that clangd should log a performance trace to, in chrome trace-viewer JSON format."
+                "clangd.trace.server": {
+                  "type": "string",
+                  "scope": "window",
+                  "enum": [
+                    "off",
+                    "messages",
+                    "verbose"
+                  ],
+                  "default": "off",
+                  "description": "Includes the communication between VS Code and the clangd language server in the output panel."
                 },
                 "clangd.semanticHighlighting": {
                     "type": "boolean",
